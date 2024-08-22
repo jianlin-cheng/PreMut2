@@ -1,4 +1,7 @@
 # PreMut2
+<p align="center">
+  <img src="model.png" width="750" title="hover text">
+</p>
 PreMut2: deep learning prediction of structures of protein mutants
 
 Accurate prediction of the structure of any protein mutant with a single-site mutation with equivariant graph neural networks. PreMut takes as input a wild-type protein structure and a single-site mutation to predict the structure of the mutated protein with the mutation.
