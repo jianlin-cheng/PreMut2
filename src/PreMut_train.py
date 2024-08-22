@@ -188,6 +188,10 @@ validation_loader = DataLoader(validation_ds, batch_size=1, shuffle=False)
 test_loader = DataLoader(test_ds,batch_size=1, shuffle=False)
 best_val_loss = float('inf')
 
+model_save_directory = 'Saved_Model'
+if not os.path.exists(model_save_directory):
+    os.mkdir(model_save_directory)
+
 num_epochs = 100
 for epoch in tqdm(range(num_epochs)):
     model.train()
@@ -349,7 +353,8 @@ for epoch in tqdm(range(num_epochs)):
     # Save model if validation loss has decreased
     if val_loss < best_val_loss:
         print(f'Validation loss decreased ({best_val_loss} --> {val_loss}). Saving model ...')
-        torch.save(model.state_dict(), 'PreMut_weights.pth')
+        
+        torch.save(model.state_dict(), os.path.join(model_save_directory,'PreMut_weights.pth'))
         best_val_loss = val_loss
 
 
