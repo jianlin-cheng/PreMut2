@@ -358,4 +358,3 @@ for epoch in tqdm(range(num_epochs)):
         best_val_loss = val_loss
 
 
-# export PATH=/bml/sajid/scwrl4:$PATH
