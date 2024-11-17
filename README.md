@@ -36,6 +36,11 @@ python src/Predict.py wild_pdb_path mutation_info chain_id output_dir name
 * output_dir is the directory where the prediction will be saved.
 * name is the desired name you want to give for the predicted pdb file.
 
+Example
+```
+python src/Predict.py 1lyd.pdb A_98_V A output_dir 1lyd_A_A_98_V_prediction
+```
+
 ## Training
 * Run the following command
 ```
